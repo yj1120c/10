@@ -3,25 +3,19 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
+void swap(int *x, int *y) {
+	int temp;
+	temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
 int main(int argc, char *argv[]) {
-	int i = 10;
-	char c = 'a';
+	int a =3;
+	int b =5;
 	
-	//iptr declaration
-	//pointing to i
-	int *iptr = &i;
-	
-	//cptr declaration
-	//pointing to c
-	char *cptr = &c;
-	
-	//iptr2 declaration
-	//point to what iptr is pointing to
-	int *iptr2 = iptr;
-	
-	printf("i : %p\n%p (size:%i)\n", iptr, &i, sizeof(iptr));
-	printf("c : %p\n%p (size:%i)\n", cptr, &c, sizeof(cptr));
-	printf("iptr2 : %p, %i\n", iptr2, *iptr2);
+	swap(&a,&b);
+	printf("a:%i, b:%i\n", a, b);
 	
 	return 0;
 }
